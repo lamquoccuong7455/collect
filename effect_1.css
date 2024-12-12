@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f6f6f6;
+}
+
+.bShadow_1{
+    margin: 30px;
+}
+.bShadow_1 p img{
+    width: 30%;
+    
+    box-shadow: 0 7px 9px -3px rgba(0, 0, 0, 0.5);
+}
+.bShadow_1 p img:hover{
+    box-shadow: 0 27px 29px -3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ;
+    cursor: pointer;
+} /* .bShadow_1 */
+
+
+.bShadow_2 {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.bShadow_2 img{
+    
+    box-shadow: 0 0 0 1px #ddd;
+    transition: 0.3s box-shadow;
+}
+.bShadow_2 img:hover{
+    box-shadow: 0 20px 20px -3px rgba(0, 0, 0, 0.2);
+} /*bShadow_2 */
+
+.afterBefore{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 100px;
+    width: 400px;
+    position: relative;
+}
+.afterBefore .detail::before{
+    display: block;
+    background-color: rgba(47, 195, 255, 0.08);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 0;
+    transition: all 0.3s;
+}
+
+.afterBefore .detail:hover::before{
+    width: 100%;
+}
+/* .afterBefore::after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}  */
+
+.afterBefore .detail::after{
+    content: "CSS";
+    color: rgba(17, 100, 228, 0.05);
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 70%;
+    font-size: 60px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.4s;
+    z-index: 0;
+    zoom: 1;
+    transform: rotate(-15deg);
+}
+.afterBefore:hover .detail::after{
+    transform: rotate(0);
+    top: -5px;
+    left: 30%;
+    zoom: 1.6;
+}
